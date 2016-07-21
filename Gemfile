@@ -33,6 +33,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
