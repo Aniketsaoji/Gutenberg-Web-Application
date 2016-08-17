@@ -1,7 +1,10 @@
 !!!
 %html
   %head
-    %title GutenbergWebApp
+    %title="Gutenberg Web App"
+    %meta{ :content => "I called to the other men that the sky was clearing, and then a moment later I realized that what I had seen was not a rift in the clouds but the white crest of an enormous wave. - Sir Ernest Shackleton", :name => "description" }
+    %meta{ :content => "Aniket Saoji, Drew Hoo, James LeDoux", :name => "author" }
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags

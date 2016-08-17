@@ -1,4 +1,59 @@
-/ <h1><%= '"I called to the other men that the sky was clearing, and then a moment later I realized that what I had seen was not a rift in the clouds but the white crest of an enormous wave." - Sir Ernest Shackleton' %></h1>
-/ - content_for :body
+!!! 5
+%html
+  %body
+    %header
+      %nav.navbar.navbar-default.navbar-fixed-top
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} Gutenberg
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                %a{:href => "#"} Project Gutenberg
+              %li
+                %a{:href => "#"} Suggest
+              %li.dropdown
+                %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  About
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"} The project
+                  %li
+                    %a{:href => "#"} About us
+                  %li
+                    %a{:href => "#"} Something else here
 
-%h1 I called to the other men that the sky was clearing, and then a moment later I realized that what I had seen was not a rift in the clouds but the white crest of an enormous wave." - Sir Ernest Shackleton
+    / %h1{:style => "margin-top: 50px"} I called to the other men that the sky was clearing, and then a moment later I realized that what I had seen was not a rift in the clouds but the white crest of an enormous wave." - Sir Ernest Shackleton
+
+    .container#search-bar
+      .row
+        .col-xs-8.col-xs-offset-2
+          .input-group
+            .input-group-btn.search-panel
+              %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                %span#search_concept Search by
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li
+                  %a{:href => "#contains"} Book (default)
+                %li
+                  %a{:href => "#contains"} Word
+                %li
+                  %a{:href => "#less_than"} Similar words used
+                %li.divider
+                %li
+                  %a{:href => "#all"} Anything
+
+            %input#search_param{:name => "search_param", :type => "hidden", :value => "all"}
+              %input.form-control{:name => "x", :placeholder => "Search Lots of Books", :type => "text"}
+    %nav.navbar.navbar-default.navbar-fixed-bottom
+      .container
+        .row
+          .col-xs-6.col-md-4.col-xs-offset-5
+            = image_tag("GitHub_Logo.png", :alt => "The Place Code Goes, Ya know")
