@@ -1,3 +1,37 @@
 // Place all the styles related to the mainPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$break-small: 320px;
+$break-large: 1200px;
+
+.test {
+  margin: 0 auto;
+  width: 250px;
+  height: 100px;
+  background: #220;
+  @media screen and (max-width: $break-small) {
+    width: 100px;
+    background: #452;
+  }
+  @media screen and (min-width: $break-large) {
+    background: #222;
+  }
+}
+.navbar{
+  background-color: transparent;
+}
+
+.navbar-right{
+  margin-right: 20px
+}
+
+#search-bar{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
